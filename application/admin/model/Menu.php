@@ -255,6 +255,7 @@ class Menu extends ModelService {
         $nav = self::getNav()->toArray();
         foreach ($nav as $vo) {
             $i = 0;
+            //第一级菜单
             $where_first_menu = [['pid', '=', $vo['id']], ['status', '=', 1]];
             $first_menu = self::field($field)->where($where_first_menu)->order($order)->select()->toArray();
             foreach ($first_menu as $vo_1) {
@@ -264,6 +265,7 @@ class Menu extends ModelService {
                     }
                     $vo_1['spread'] = (bool)$vo_1['spread'];
                     $menu_list['99php_' . $vo['id']][$i] = $vo_1;
+                    //第二级菜单
                     $where_second_menu = [['pid', '=', $vo_1['id']], ['status', '=', 1]];
                     $second_menu = self::field($field)->where($where_second_menu)->order($order)->select()->toArray();
                     foreach ($second_menu as $vo_2) {

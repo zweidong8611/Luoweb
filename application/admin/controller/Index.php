@@ -22,6 +22,8 @@ class Index extends AdminController {
      * @return mixed
      */
     public function index() {
+        $data = model('T_LIN_LINDEPT')->select();
+        dump($data);exit;
         Cache::remember('Home', function () {
             return model('menu')->getHome();
         });

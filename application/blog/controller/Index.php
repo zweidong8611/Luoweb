@@ -34,7 +34,7 @@ class Index extends BlogController
             'keywords'            => blogconf('blog', 'SiteKeywords'),
             'description'         => blogconf('blog', 'SiteDescription'),
             'slider_list'         => model('Slider')->getSliderList(),
-            'notice_list'         => model('Notice')->getNoticeList(),
+            'notice_list'         => model('ModelOne')->getNoticeList(),
             'recommend_list'      => model('Article')->getRecommendList(),
             'click_ranking_list'  => model('Article')->getClickRankingList(),
             'newest_article_list' => model('Article')->getNewestArticleList(),

@@ -7,20 +7,19 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-namespace think\db\connector;
+namespace think\oracle;
 
 use PDO;
-use think\db\Connection;
-use think\Log;
+use think\db\Connection as BaseConnection;
 
 /**
  * Oracle数据库驱动
  */
-class Oracle extends Connection
+class Connection extends BaseConnection
 {
 
-    protected $builderClassName = '\\think\\db\\builder\\Oracle';
-    //protected $builderClassName = '\\think\\oracle\\Builder';
+    protected $builderClassName = '\\think\\oracle\\Builder';
+
     /**
      * 解析pdo连接的dsn信息
      * @access protected

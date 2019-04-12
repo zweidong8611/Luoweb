@@ -13,7 +13,7 @@ use think\Validate;
 
 /**
  * 公告验证器
- * Class Notice
+ * Class ModelOne
  * @package app\admin\validate\blog
  */
 class Notice extends Validate {

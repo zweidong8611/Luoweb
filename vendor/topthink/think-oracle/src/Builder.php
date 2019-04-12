@@ -7,16 +7,15 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-namespace think\db\builder;
+namespace think\oracle;
 
-use think\db\Builder;
+use think\db\Builder as BaseBuilder;
 use think\db\Query;
-use think\Exception;
 
 /**
  * Oracle数据库驱动
  */
-class Oracle extends Builder
+class Builder extends BaseBuilder
 {
     protected $selectSql = 'SELECT * FROM (SELECT thinkphp.*, rownum AS numrow FROM (SELECT  %DISTINCT% %FIELD% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%) thinkphp ) %LIMIT%%COMMENT%';
 
@@ -69,12 +68,6 @@ class Oracle extends Builder
      */
     public function parseKey(Query $query, $key, $strict = false)
     {
-        if (is_numeric($key)) {
-            return $key;
-        } elseif ($key instanceof Expression) {
-            return $key->getValue();
-        }
-
         $key = trim($key);
 
         if (strpos($key, '->') && false === strpos($key, '(')) {

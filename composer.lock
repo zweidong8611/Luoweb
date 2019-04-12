@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd37202f02651057091072d85976dcb9",
+    "content-hash": "cb450f6ef1f7d8a55f2a07c98a7225bb",
     "packages": [
         {
             "name": "phpmailer/phpmailer",
@@ -253,6 +253,43 @@
                 }
             ],
             "time": "2018-05-11T06:45:42+00:00"
+        },
+        {
+            "name": "topthink/think-oracle",
+            "version": "v2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-oracle.git",
+                "reference": "f953e17c34408a58b21298f981d13b1ddecae0e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/think-oracle/zipball/f953e17c34408a58b21298f981d13b1ddecae0e4",
+                "reference": "f953e17c34408a58b21298f981d13b1ddecae0e4",
+                "shasum": ""
+            },
+            "require": {
+                "topthink/framework": "~5.1.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "think\\oracle\\": "src"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "liu21st",
+                    "email": "liu21st@gmail.com"
+                }
+            ],
+            "description": "Oracle driver for thinkphp5",
+            "time": "2018-04-14T00:44:42+00:00"
         }
     ],
     "packages-dev": [],

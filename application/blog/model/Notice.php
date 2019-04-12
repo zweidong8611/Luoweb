@@ -16,7 +16,7 @@ use app\common\service\ModelService;
 
 /**
  * 博客公告模型
- * Class Notice
+ * Class ModelOne
  * @package app\blog\model
  */
 class Notice extends ModelService {

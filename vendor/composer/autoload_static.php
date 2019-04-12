@@ -14,6 +14,7 @@ class ComposerStaticInit65684b81bdff224effa4465964f6094d
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
+            'think\\oracle\\' => 13,
             'think\\composer\\' => 15,
             'think\\captcha\\' => 14,
         ),
@@ -32,6 +33,10 @@ class ComposerStaticInit65684b81bdff224effa4465964f6094d
     );
 
     public static $prefixDirsPsr4 = array (
+        'think\\oracle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/think-oracle/src',
+        ),
         'think\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-installer/src',
